@@ -1,0 +1,12 @@
+<form #updateForm='ngForm' (ngSubmit)='updatePost(updateForm.value); updateForm.reset();' class="container">
+  <div class="form-group">
+    <label for="title">Title </label>
+    <input type="text" class="form-control" id="title" name='title' placeholder="Enter title" [(ngModel)]="post.title">
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <textarea type="text" class="form-control" id="body" name='body' placeholder="Enter Body" [(ngModel)]="post.body">
+      </textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Update Post</button>
+</form>
